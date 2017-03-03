@@ -1,5 +1,10 @@
 var Scraper = require('./lib/scraper.js');
 
-module.exports = function scrape (options, callback) {
+var factoryMethod = function scrape (options, callback) {
 	return new Scraper(options).scrape(callback);
 };
+
+factoryMethod.LocalFSAdapter = Scraper.LocalFSAdapter;
+factoryMethod.DropboxFSAdapter = Scraper.DropboxFSAdapter;
+
+module.exports = factoryMethod;

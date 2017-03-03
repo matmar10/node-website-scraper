@@ -1,6 +1,6 @@
 var should = require('should');
 var path = require('path');
-var FSAdapter = require('../../lib/fs-adaper');
+var FSAdapter = require('../../lib/local-fs-adapter');
 
 describe('FSAdapter', function () {
 	describe('constructor', function() {
